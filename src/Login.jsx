@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css';
+import './login.css';
 import logoVideobelajar from './assets/image/Logo.png';
 
 const GoogleIcon = () => (
