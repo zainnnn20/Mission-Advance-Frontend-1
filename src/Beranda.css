@@ -376,6 +376,7 @@
     max-width: 1030px;
     margin-left: auto;
     margin-right: auto;
+    
   }
 
   /* Target: Lapisan overlay gelap di atas gambar CTA. */
@@ -386,7 +387,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 1rem;
   }
 
