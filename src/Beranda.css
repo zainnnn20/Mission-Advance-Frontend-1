@@ -1,0 +1,907 @@
+/* Aturan ini berlaku untuk layar dengan lebar dekstop dan laptop maksimal 1440px.*/
+@media (max-width: 1440px) {
+
+  /* --- Settingan Font Global --- */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  /* Target: Elemen body, pengaturan dasar untuk seluruh halaman. */
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Target: Wadah utama seluruh halaman beranda. */
+  .beranda-page {
+    background-color: #FFFBF0 !important;
+    font-family: 'Inter', sans-serif;
+    color: #374151;
+
+  }
+
+  /* Target: Kontainer yang membatasi lebar konten agar tidak terlalu melebar di layar besar. */
+  .beranda-container {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+
+  }
+
+  /* --- Header --- */
+  /* Target: Seluruh bagian header di atas. */
+  .beranda-header {
+    background-color: #FFFFFF;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E5E7EB;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.07));
+  }
+
+  /* Target: Konten di dalam header (logo dan navigasi). */
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Target: Gambar logo di header. */
+  .header-logo {
+    width: 193.03024291992188px;
+    height: 30.080001831054688px;
+    angle: 0 deg;
+    opacity: 1;
+    top: 13px;
+    left: 22px;
+  }
+
+  /* Target: Ikon profil versi mobile (disembunyikan di desktop). */
+  .profile-mobile {
+    display: none;
+  }
+
+  /* Target: Ikon profil versi desktop (ditampilkan di desktop). */
+  .profile-desktop {
+    display: block;
+  }
+
+  /* Target: Teks "Kategori" di header. */
+  .header-category-text {
+    width: 64px;
+    height: 22px;
+    gap: 1px;
+    angle: 0 deg;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  /* Target: Wadah untuk navigasi di sisi kanan header. */
+  .header-right-nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  /* Target: Gambar profil pengguna di header. */
+  .user-profile img {
+    width: 44px;
+    height: 44px;
+    angle: 0 deg;
+    opacity: 1;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  /* --- Hero Section --- */
+  /* Target: Pembungkus (wrapper) untuk bagian hero. */
+  .hero-section-wrapper {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  /* Target: Bagian utama Hero dengan gambar latar. */
+  .hero-section {
+    position: relative;
+    padding: 5rem 1.5rem;
+    text-align: center;
+    color: white;
+    background-image: url('H1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    /* Sudut melengkung pada hero */
+  }
+
+  /* Target: Lapisan (overlay) gelap di atas gambar hero. */
+  .hero-section-wrapper {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Target: Lapisan (overlay) gelap di atas gambar hero. */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    /* Samakan dengan parent */
+  }
+
+  /* Target: Subjudul seksi (jika ada). */
+  .section-subtitle {
+    color: #555;
+  }
+
+  /* Target: Konten di dalam hero (judul, paragraf, tombol). */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  /* Target: Teks judul utama di hero section. */
+  .hero-content h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 1rem 0;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  /* Target: Teks paragraf/deskripsi di hero section. */
+  .hero-content p {
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Target: Tombol di dalam hero section. */
+  .hero-button {
+    background-color: #3ECF4C;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  /* Target: Kondisi tombol hero saat kursor mouse di atasnya (hover). */
+  .hero-button:hover {
+    background-color: #3ECF4C;
+  }
+
+  /* --- Main Content & Course Grid --- */
+  /* Target: Wadah utama untuk konten di bawah hero (daftar kursus). */
+  .main-content {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Target: Judul untuk setiap seksi, seperti "Kursus Populer". */
+  .section-title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Target: Wadah untuk tombol-tombol filter. */
+  .filter-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Target: Setiap tombol filter individu. */
+  .filter-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0.9rem 1.25rem;
+    color: #6c757d;
+    font-size: 16px;
+    font-weight: 540;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    background-position: 39% bottom;
+    transition: background-size 0.3s ease;
+    margin-left: -20px;
+  }
+
+  /* Target: Kondisi tombol filter saat di-hover, memunculkan garis bawah. */
+  .filter-btn:hover {
+    color: #111;
+    background-size: 60% 5px;
+  }
+
+  /* Target: Kondisi tombol filter yang sedang aktif. */
+  .filter-btn.active {
+    color: red;
+  }
+
+  /* Target: Grid yang menampung semua kartu kursus. */
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Target: Setiap kartu kursus individu. */
+  .course-card {
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  /* Wadah utama yang menyejajarkan avatar dan teks */
+  .course-instructor {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Target: Gambar avatar instruktur. */
+  .instructor-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* Wadah untuk dua baris teks */
+  .instructor-info {
+    line-height: 0.7;
+  }
+
+  /* Target: Gambar avatar instruktur. */
+  .instructor-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  /* Target: Jabatan instruktur, versi desktop. */
+  .instructor-title .title-desktop {
+    font-size: 0.8rem;
+    color: #6B7280;
+    margin: 0;
+    display: block;
+  }
+
+  /* Target: Jabatan instruktur, versi mobile (disembunyikan di desktop). */
+  .instructor-title .title-mobile {
+    display: none;
+  }
+
+  .course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .course-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .course-content {
+    padding: 1rem;
+    font-size: 15px;
+
+
+  }
+
+  /* Target: Judul kursus di dalam kartu. */
+  .course-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .course-author {
+    font-size: 0.8rem;
+    color: #6B7280;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Target: Area statistik kursus (rating, jumlah siswa). */
+  .course-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* <-- Tambahkan ini */
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #6B7280;
+  }
+
+  /*Target: Setiap item statistik (ikon + teks).*/
+  .course-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  /* Target: Teks harga kursus. */
+  .course-price {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #10B981;
+  }
+
+  /* --- CTA (Call to Action) Section --- */
+  /* Target: Pembungkus seksi CTA. */
+  .cta-section-wrapper {
+    padding: 2rem;
+  }
+
+  /* Target: Bagian CTA dengan gambar latar. */
+  .cta-section {
+    position: relative;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: white;
+    background-image: url('https://placehold.co/1200x300/222/444?text=CTA+Image');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    max-width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Target: Lapisan overlay gelap di atas gambar CTA. */
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+  }
+
+  /* Target: Konten di dalam seksi CTA (judul, form). */
+  .cta-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Target: Teks kecil di atas judul utama CTA. */
+  .cta-eyebrow {
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    /* Membuat teks menjadi huruf besar */
+    letter-spacing: 0.1em;
+    /* Memberi jarak antar huruf */
+    color: rgba(255, 255, 255, 0.8);
+    /* Warna putih dengan sedikit transparansi */
+    margin: 0 0 0.5rem 0;
+    /* Jarak bawah ke judul utama */
+  }
+
+  /* Target: Judul utama seksi CTA. */
+  .cta-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Target: Teks paragraf/deskripsi di seksi CTA. */
+  .cta-content p {
+    margin: 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Target: Form input email di seksi CTA. */
+  .cta-form {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+
+  /* Target: Kotak input email di form CTA. */
+  .cta-form input {
+    padding: 0.75rem 9rem 0.75rem 1rem;
+    border: 1px solid #9CA3AF;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Target: Tombol di dalam form CTA. */
+  .cta-form button {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    padding: 0.4rem 0.8rem;
+    background-color: #FFBD3A;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* --- Footer --- */
+  /* Target: Seluruh bagian footer. */
+  .beranda-footer {
+    background-color: #FFFFFF;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Target: Grid layout untuk konten utama footer. */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #E5E7EB;
+
+  }
+
+  /* Target: Logo di footer. */
+  .footer-logo {
+    width: 193.03024291992188px;
+    height: 30.080001831054688px;
+    angle: 0 deg;
+    opacity: 1;
+    top: 13px;
+    left: 5px;
+
+  }
+
+  /* Target: Paragraf deskripsi tentang perusahaan di footer. */
+  .footer-about p {
+    margin-top: 1rem;
+    color: #6B7280;
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
+
+  /* Target: Judul setiap kolom link di footer. */
+  .footer-links h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  /* Target: Daftar link (ul) di footer. */
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Target: Setiap link individu di footer. */
+  .footer-links a {
+    color: #6B7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  /* Target: Kondisi link footer saat di-hover. */
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Target: Bagian paling bawah footer (copyright dan ikon sosial). */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    color: #9CA3AF;
+    font-size: 0.875rem;
+  }
+
+  /* Target: Teks tagline di footer. */
+  .footer-tagline {
+    font-weight: 700;
+    margin-top: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Target: Paragraf di dalam footer-bottom. */
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  /* Target: Wadah untuk ikon-ikon media sosial. */
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* Target: Setiap ikon sosial individu. */
+  .social-icon {
+    color: #6B7280;
+    transition: color 0.2s;
+  }
+
+  /* Target: Kondisi ikon sosial saat di-hover. */
+  .social-icon:hover {
+    color: #1F2937;
+  }
+
+  /* Target: Ikon panah di footer (digunakan untuk mobile). */
+  .footer-arrow-icon {
+    display: none;
+
+  }
+}
+
+/* --- ATURAN RESPONSIf (TABLET & MOBILE) --- */
+/* Target: Aturan ini hanya berlaku untuk layar dengan lebar maksimal 768px. */
+
+@media (max-width: 768px) {
+
+  /* Target: Kontainer utama di mobile. */
+  .beranda-container {
+    padding: 0 1rem;
+  }
+
+  /* Target: Wrapper hero dan cta di mobile. */
+  .hero-section-wrapper,
+  .cta-section-wrapper {
+    padding: 1rem;
+  }
+
+  .hero-section {
+    margin: 0;
+  }
+
+  /* Target: Judul hero di mobile. */
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .footer-about,
+  .footer-links {
+    align-items: center;
+  }
+
+  /* Target: Grid kursus di mobile. */
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Target: Grid footer di mobile. */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-desktop {
+    display: none;
+  }
+
+  /* Target: Menampilkan ikon profil versi mobile. */
+  .profile-mobile {
+    display: block;
+    width: 25px !important;
+    height: 13px !important;
+  }
+
+  /* Target: Wadah halaman beranda di mobile. */
+  .beranda-page {
+    background-color: #FFFBF5;
+    font-family: 'Inter', sans-serif;
+    color: #374151;
+    overflow-x: hidden;
+    /* <-- TAMBAHKAN BARIS INI */
+  }
+
+  /* Target: Logo di header mobile. */
+  .header-logo {
+    width: 144.77267456054688px;
+    height: 22.560001373291016px;
+    angle: 0 deg;
+    opacity: 1;
+    top: 9.75px;
+    left: 3.25px;
+
+  }
+
+  /* Target: Gambar profil di header mobile. */
+  .user-profile img {
+    width: 30px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0;
+  }
+
+  /* Target: Menyembunyikan teks "Kategori" di header mobile. */
+  .header-category-text {
+    display: none;
+  }
+
+  /* Target: Tombol filter di mobile. */
+  .filter-buttons {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 4px 1rem 10px 1rem;
+  }
+
+  /* Target: Menyembunyikan scrollbar pada tombol filter di beberapa browser. */
+  .filter-buttons::-webkit-scrollbar {
+    display: none;
+    color: red;
+  }
+
+  /* Target: Form CTA di mobile. */
+  .cta-form {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px;
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    border: 1px solid #E5E7EB;
+  }
+
+
+  .cta-form button:hover {
+    opacity: 0.9;
+  }
+
+  .cta-form {
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Target: Input dan Tombol di dalam form CTA mobile. */
+  .cta-form input,
+  .cta-form button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: -5px;
+    box-sizing: border-box;
+
+  }
+
+  .hero-section {
+    margin-top: 40px;
+  }
+
+  /* Target: Mengatur ulang padding dan tampilan input CTA di mobile. */
+  .cta-form input {
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Target: Placeholder text di dalam input CTA mobile. */
+  .cta-form input::placeholder {
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Target: Tombol CTA di mobile. */
+  .cta-form button {
+    width: 100%;
+    background-color: #F59E0B;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+
+  .cta-form button:hover {
+    opacity: 0.9;
+  }
+
+  /* Target: Mengatur ulang seksi CTA di mobile. */
+  .cta-section {
+    position: relative;
+    padding: 6rem 1.5rem;
+    text-align: center;
+  }
+
+  /* Target: Mengatur ulang konten CTA di mobile. */
+  .cta-content {
+    text-align: center;
+    color: white;
+    margin-top: -50px;
+  }
+
+  /* Target: Judul CTA di mobile. */
+  .cta-content h2 {
+    font-size: 27px;
+  }
+
+  .course-title {
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  .course-subtitle {
+    display: none;
+  }
+
+  /* Target: Kartu kursus di mobile. */
+  .course-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Target: Gambar thumbnail kursus di mobile. */
+  .course-image {
+    width: 90px;
+    height: 110px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transform: translate(10px, -30px);
+    margin-right: 15px;
+    object-fit: cover;
+  }
+
+  /* Target: Konten teks di kartu kursus mobile. */
+  .course-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  /* Target: Menampilkan jabatan instruktur versi mobile. */
+  .instructor-title .title-mobile {
+    display: inline;
+    font-size: 13px;
+  }
+
+  /* Target: Menyembunyikan jabatan instruktur versi desktop. */
+  .instructor-title .title-desktop {
+    display: none;
+  }
+
+  /* Target: Mengatur ulang posisi statistik kursus di mobile. */
+  .course-stats {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-left: -100px;
+    padding-right: 22px;
+  }
+
+  /* Target: Mengatur ulang posisi harga kursus di mobile. */
+  .course-price {
+    margin-top: 5 !important;
+    margin-right: 200px !;
+    font-size: 22px;
+
+  }
+
+  .rating-info {}
+
+  .rating-text-wrapper {
+    border-bottom: 1px solid #6B7280;
+    padding-bottom: 0px;
+    /* Opsional, untuk memberi jarak */
+  }
+
+  .footer-about {
+    text-align: left;
+  }
+
+  /* Target: Mengatur ulang layout grid footer di mobile. */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  /* Target: Menyembunyikan daftar link di footer mobile. */
+  .footer-links ul {
+    display: none;
+  }
+
+  /* Target: Mengubah judul link di footer menjadi baris yang bisa diklik. */
+  .footer-links h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* Target: Menampilkan ikon panah di kanan judul link footer mobile. */
+  .footer-arrow-icon {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+  }
+
+  /* Target: Mengatur ulang bagian bawah footer di mobile. */
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-top: 30px;
+    font-size: 14px;
+  }
+
+  /* Target: Mengubah ukuran logo di footer mobile. */
+  .footer-logo {
+    margin-top: -30px;
+    width: 161.60670471191406px;
+    height: 25.183256149291992px;
+    angle: 0 deg;
+    opacity: 1;
+    top: 5.44px;
+    left: 3.79px;
+
+  }
+}

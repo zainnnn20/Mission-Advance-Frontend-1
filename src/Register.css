@@ -1,0 +1,344 @@
+
+/* --- GAYA UMUM BERSAMA (Bisa dipakai di halaman lain) --- */
+/* Target: Gambar logo (definisi pertama) */
+.register-logo {
+  width: 193.03024291992188px;
+  height: 30.080001831054688px;
+  angle: 0 deg;
+  opacity: 1;
+  top: 13px;
+  left: 22px;
+}
+
+/* Target: Teks label di atas setiap kolom input */
+.form-label {
+  display: block;
+  color: #4A505C;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+/* Target: Kotak input tempat pengguna mengetik */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Target: Wadah khusus untuk sebuah input dan ikon di dalamnya */
+.input-wrapper {
+  position: relative;
+}
+
+/* Target: Ikon yang ada di dalam kolom input (misalnya, ikon mata) */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Target: Gambar SVG dari ikon itu sendiri */
+.input-icon svg {
+  width: 1rem;
+  height: 1rem;
+  color: #9CA3AF;
+}
+
+/* Target: Gaya dasar yang berlaku untuk semua tombol */
+.btn {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Target: Tombol utama (misalnya, tombol "Daftar") */
+.btn-primary {
+  color: white;
+  background-color: #4ADE80;
+}
+
+/* Target: Tombol alternatif atau sekunder */
+.btn-secondary {
+  color: #4ADE80;
+  background-color: #D1FAE5;
+}
+
+/* Target: Tombol khusus untuk "Masuk dengan Google" */
+.btn-google {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E5E7EB;
+  background-color: white;
+  color: #374151;
+}
+
+/* Target: Logo Google di dalam tombol */
+.btn-google svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+/* Target: Wadah untuk garis pemisah dan teks di tengahnya */
+.separator {
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+  height: 1px;
+  background-color: #E5E7EB;
+}
+
+/* Target: Teks di tengah garis pemisah (misalnya, "atau") */
+.separator-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 0.75rem;
+  background-color: white;
+  color: #9CA3AF;
+  font-size: 0.875rem;
+}
+
+/* --- GAYA KHUSUS HALAMAN REGISTER --- */
+/* Target: Seluruh halaman registrasi, dari atas sampai bawah */
+.register-page {
+  background-color: #FFFBF0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Target: Bagian kepala halaman (header) yang berisi logo */
+.register-header {
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.07));
+  display: flex;
+  align-items: center;
+}
+
+/* Target: Elemen semu sebelum konten header (biasanya untuk efek visual tambahan) */
+.register-header::before {
+  text-shadow: -1.5px -1.5px 0 #fff, 1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px 1.5px 0 #fff;
+}
+
+/* Target: Area konten utama yang berada di bawah header */
+.register-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Target: Kotak putih yang menjadi wadah utama dari form registrasi */
+.register-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+/* Target: Wadah untuk teks judul dan subjudul */
+.register-title-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Target: Gambar logo (definisi kedua, kemungkinan ini yang aktif karena posisinya di bawah) */
+.register-logo {
+  width: 144.77267456054688px;
+  height: 22.560001373291016px;
+  angle: 0 deg;
+  opacity: 1;
+  top: 9.75px;
+  left: 3.25px;
+}
+
+/* Target: Teks judul besar (misalnya, "Buat Akun") */
+.register-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Target: Teks kecil di bawah judul */
+.register-subtitle {
+  color: #6B7280;
+  margin-top: 0.5rem;
+}
+
+/* Target: Elemen <form> yang membungkus semua input dan label */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Target: Elemen input formnya*/
+.phone-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Target: Input field yang hanya muncul di tampilan mobile */
+.mobile-only-field {
+  display: none;
+}
+
+/* --- INPUT NOMOR TELEPON KUSTOM --- */
+/* Target: Wadah yang membungkus dropdown kode negara dan input nomor telepon */
+.phone-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Target: Kotak visual dropdown kode negara (yang menampilkan bendera dan +62) */
+.country-code-selector {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  background-color: #F9FAFB;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.3rem center;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Target: Area kiri di dalam dropdown yang berisi bendera negara */
+.flag-area {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  padding-bottom: 0px;
+  border-right: 1px solid #E5E7EB;
+  background-color: #F4F5FA;
+}
+
+/* Target: Gambar bendera negara */
+.country-flag {
+  width: 24px;
+  margin-top: -1px;
+  margin-bottom: 1px;
+}
+
+/* Target: Area kanan di dalam dropdown yang berisi teks kode negara (+62) */
+.code-area {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #374151;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+}
+
+/* Target: Teks kode negara itu sendiri */
+.code-text {
+  position: relative;
+  left: -7px;
+}
+
+/* Target: Elemen <select> HTML asli yang dibuat transparan agar fungsional */
+.country-code-dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/* Target: Kotak input untuk mengetikkan nomor telepon */
+.phone-input-number {
+  flex-grow: 1;
+}
+
+/* Target: Untuk teks +62 dalam kolom */
+.country-code-dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Target: Teks link "Lupa Kata Sandi?" atau link lainnya */
+.forgot-password-link {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333333AD;
+  text-decoration: none;
+}
+
+/* Target: Wadah yang membungkus beberapa tombol agar berkelompok */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+/* --- ATURAN RESPONSIf (MOBILE) --- */
+/* Target: Blok aturan yang hanya berlaku untuk layar dengan lebar maksimal 768px */
+@media (max-width: 768px) {
+
+  /* Target: Ukuran logo saat dibuka di layar kecil */
+  .register-logo {
+    width: 144.77267456054688px;
+    height: 22.560001373291016px;
+    angle: 0 deg;
+    opacity: 1;
+    top: 9.75px;
+    left: 3.25px;
+  }
+
+  /* Target: Menampilkan kolom input yang tadinya disembunyikan di desktop */
+  .mobile-only-field {
+    display: block;
+    margin-bottom: 1.05rem;
+  }
+
+  /* Target: Mengatur ulang lebar input telepon di layar kecil */
+  .country-code-selector,
+  .phone-input-number {
+    width: 30%;
+  }
+
+  /* Target: Mengatur ulang gaya teks kode negara di layar kecil */
+  .code-text {
+    position: relative;
+    /* Wajib ada untuk bisa digeser */
+    left: -7px;
+    font-size: 14px;
+  }
+
+}
