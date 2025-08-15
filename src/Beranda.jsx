@@ -164,15 +164,19 @@ function Beranda({ onLogout }) {
             </p>
           </div>
           <div className="footer-links">
-            <h4>Kategori <img src={arrowIcon} alt="Buka" className="footer-arrow-icon" /></h4>
-            <ul>
-              <li><a href="#">Digital & Teknologi</a></li>
-              <li><a href="#">Pemasaran</a></li>
-              <li><a href="#">Manajemen Bisnis</a></li>
-              <li><a href="#">Pengembangan Diri</a></li>
-              <li><a href="#">Desain</a></li>
-            </ul>
-          </div>
+  <h4>
+    <span className="desktop-only">Kategori</span>
+    <span className="mobile-only">Perusahaan</span>
+    <img src={arrowIcon} alt="Buka" className="footer-arrow-icon" />
+  </h4>
+  <ul>
+    <li><a href="#">Digital & Teknologi</a></li>
+    <li><a href="#">Pemasaran</a></li>
+    <li><a href="#">Manajemen Bisnis</a></li>
+    <li><a href="#">Pengembangan Diri</a></li>
+    <li><a href="#">Desain</a></li>
+  </ul>
+</div>
           <div className="footer-links">
             <h4>Perusahaan <img src={arrowIcon} alt="Buka" className="footer-arrow-icon" /></h4>
             <ul>

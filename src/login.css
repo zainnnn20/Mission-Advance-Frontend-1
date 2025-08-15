@@ -134,7 +134,7 @@
 .forgot-password-link {
   display: block;
   text-align: right;
-  margin-top: 0.5rem;
+  margin-top: 15px !important;
   font-size: 13px !important;
   font-weight: 600;
   color: #6B7280 !important;

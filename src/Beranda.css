@@ -138,7 +138,7 @@
 
   /* Target: Subjudul seksi (jika ada). */
   .section-subtitle {
-    color: #555;
+    color: #333333AD;
   }
 
   /* Target: Konten di dalam hero (judul, paragraf, tombol). */
@@ -168,7 +168,7 @@
 
   /* Target: Tombol di dalam hero section. */
   .hero-button {
-    background-color: #3ECF4C;
+    background-color: #10B981;
     color: white;
     padding: 0.8rem 2rem;
     border: none;
@@ -197,6 +197,7 @@
     font-weight: 600;
     margin-bottom: 1.5rem;
     font-family: 'Poppins', sans-serif;
+    color: #222325;
   }
 
   /* Target: Wadah untuk tombol-tombol filter. */
@@ -213,7 +214,7 @@
     outline: none;
     box-shadow: none;
     padding: 0.9rem 1.25rem;
-    color: #6c757d;
+    color: #333333AD;
     font-size: 16px;
     font-weight: 540;
     cursor: pointer;
@@ -280,7 +281,7 @@
   .instructor-name {
     font-size: 15px;
     font-weight: 600;
-    color: #1F2937;
+    color: #222325;
     margin: 0;
     margin-top: 10px;
   }
@@ -288,7 +289,7 @@
   /* Target: Jabatan instruktur, versi desktop. */
   .instructor-title .title-desktop {
     font-size: 0.8rem;
-    color: #6B7280;
+    color: #333333AD;
     margin: 0;
     display: block;
   }
@@ -323,6 +324,7 @@
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
     font-family: 'Poppins', sans-serif;
+    color: #222325;
   }
 
   .course-author {
@@ -376,7 +378,7 @@
     max-width: 1030px;
     margin-left: auto;
     margin-right: auto;
-    
+
   }
 
   /* Target: Lapisan overlay gelap di atas gambar CTA. */
@@ -443,7 +445,7 @@
   /* Target: Kotak input email di form CTA. */
   .cta-form input {
     padding: 0.75rem 9rem 0.75rem 1rem;
-    border: 1px solid #9CA3AF;
+    border: 1px solid #333333AD;
     border-radius: 0.5rem;
     width: 100%;
     box-sizing: border-box;
@@ -463,7 +465,7 @@
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    font-weight: 600;
+    font-weight: 700 !important;
     cursor: pointer;
   }
 
@@ -508,6 +510,7 @@
   .footer-links h4 {
     font-weight: 600;
     margin-bottom: 1rem;
+    color: #222325;
   }
 
   /* Target: Daftar link (ul) di footer. */
@@ -538,7 +541,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    color: #9CA3AF;
+    color: #333333AD;
     font-size: 0.875rem;
   }
 
@@ -546,7 +549,7 @@
   .footer-tagline {
     font-weight: 700;
     margin-top: 1rem;
-    color: #374151;
+    color: #222325 !important;
     line-height: 1.6;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
@@ -555,6 +558,11 @@
   /* Target: Paragraf di dalam footer-bottom. */
   .footer-bottom p {
     margin: 0;
+  }
+
+  /*Mennampilkan footer perusahaan, dll.*/
+  .mobile-only {
+    display: none;
   }
 
   /* Target: Wadah untuk ikon-ikon media sosial. */
@@ -566,7 +574,7 @@
 
   /* Target: Setiap ikon sosial individu. */
   .social-icon {
-    color: #6B7280;
+    color: #222325;
     transition: color 0.2s;
   }
 
@@ -579,6 +587,10 @@
   .footer-arrow-icon {
     display: none;
 
+  }
+
+  .footer-address {
+    color: #222325 !important;
   }
 }
 
@@ -818,6 +830,7 @@
   .instructor-title .title-mobile {
     display: inline;
     font-size: 13px;
+    color: #333333AD;
   }
 
   /* Target: Menyembunyikan jabatan instruktur versi desktop. */
@@ -876,6 +889,7 @@
     margin: 0;
     font-weight: 600;
     cursor: pointer;
+    color: #222325;
   }
 
   /* Target: Menampilkan ikon panah di kanan judul link footer mobile. */
@@ -905,4 +919,15 @@
     left: 3.79px;
 
   }
+
+  /* Menngatur footer teks perusahaan dll. */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Tampilkan teks versi mobile */
+  .mobile-only {
+    display: inline;
+  }
+
 }
