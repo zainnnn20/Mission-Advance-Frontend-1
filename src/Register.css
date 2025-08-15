@@ -297,6 +297,8 @@
   font-weight: 500;
   color: #333333AD;
   text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: -13px;
 }
 
 /* Target: Wadah yang membungkus beberapa tombol agar berkelompok */
@@ -336,9 +338,13 @@
   /* Target: Mengatur ulang gaya teks kode negara di layar kecil */
   .code-text {
     position: relative;
-    /* Wajib ada untuk bisa digeser */
     left: -7px;
     font-size: 14px;
   }
+
+/*Form Jenis Kelamin*/  
+select.form-input {
+  background-color: white; 
+}
 
 }
