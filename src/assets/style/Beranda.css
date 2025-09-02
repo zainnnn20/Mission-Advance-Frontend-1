@@ -9,14 +9,13 @@
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', sans-serif;
   }
 
   /* Target: Wadah utama seluruh halaman beranda. */
   .beranda-page {
     background-color: #FFFBF0 !important;
-    font-family: 'Inter', sans-serif;
     color: #374151;
-
   }
 
   /* Target: Kontainer yang membatasi lebar konten agar tidak terlalu melebar di layar besar. */
@@ -95,6 +94,44 @@
     opacity: 1;
     border-radius: 10px;
     cursor: pointer;
+  }
+
+  .profile-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* Jarak antara teks dan ikon */
+    cursor: pointer;
+  }
+
+  /* Wadah untuk teks "Hello" dan email */
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* PENTING: Membuat teks rata kanan */
+    text-align: right;
+  }
+
+  .user-greeting {
+    font-weight: 600;
+    white-space: nowrap;
+    /* Mencegah nama terpotong */
+    color: #374151;
+  }
+
+  .user-email {
+    font-size: 0.8rem;
+    color: #6B7280;
+    white-space: nowrap;
+  }
+
+  /* Mengganti .user-profile img agar lebih spesifik */
+  .profile-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: cover;
   }
 
   /* --- Hero Section --- */
@@ -189,6 +226,7 @@
   .main-content {
     padding-top: 3rem;
     padding-bottom: 4rem;
+
   }
 
   /* Target: Judul untuk setiap seksi, seperti "Kursus Populer". */
@@ -338,7 +376,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* <-- Tambahkan ini */
     gap: 1rem;
     font-size: 0.8rem;
     color: #6B7280;
@@ -404,13 +441,9 @@
     font-size: 17px;
     font-weight: 500;
     text-transform: uppercase;
-    /* Membuat teks menjadi huruf besar */
     letter-spacing: 0.1em;
-    /* Memberi jarak antar huruf */
     color: rgba(255, 255, 255, 0.8);
-    /* Warna putih dengan sedikit transparansi */
     margin: 0 0 0.5rem 0;
-    /* Jarak bawah ke judul utama */
   }
 
   /* Target: Judul utama seksi CTA. */
@@ -484,7 +517,6 @@
     gap: 2rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #E5E7EB;
-
   }
 
   /* Target: Logo di footer. */
@@ -495,7 +527,6 @@
     opacity: 1;
     top: 13px;
     left: 5px;
-
   }
 
   /* Target: Paragraf deskripsi tentang perusahaan di footer. */
@@ -591,17 +622,21 @@
 
   .footer-address {
     color: #222325 !important;
+
   }
 }
 
 /* --- ATURAN RESPONSIf (TABLET & MOBILE) --- */
 /* Target: Aturan ini hanya berlaku untuk layar dengan lebar maksimal 768px. */
-
 @media (max-width: 768px) {
 
   /* Target: Kontainer utama di mobile. */
   .beranda-container {
     padding: 0 1rem;
+  }
+
+  .user-info {
+    display: none;
   }
 
   /* Target: Wrapper hero dan cta di mobile. */
@@ -663,7 +698,6 @@
     opacity: 1;
     top: 9.75px;
     left: 3.25px;
-
   }
 
   /* Target: Gambar profil di header mobile. */
@@ -679,6 +713,15 @@
   /* Target: Menyembunyikan teks "Kategori" di header mobile. */
   .header-category-text {
     display: none;
+  }
+
+  .header-right-nav {
+    gap: 1rem;
+  }
+
+  .header-right-nav .header-category-text:first-child {
+    display: block;
+    font-size: 14px;
   }
 
   /* Target: Tombol filter di mobile. */
@@ -731,7 +774,6 @@
     box-sizing: border-box;
     margin: -5px;
     box-sizing: border-box;
-
   }
 
   .hero-section {
@@ -792,7 +834,7 @@
 
   .course-title {
     margin-top: 20px;
-    font-size: 17px;
+    font-size: 1rem;
   }
 
   .course-subtitle {
@@ -809,10 +851,10 @@
   /* Target: Gambar thumbnail kursus di mobile. */
   .course-image {
     width: 90px;
-    height: 110px;
+    height: 90px;
     border-radius: 8px;
     flex-shrink: 0;
-    transform: translate(10px, -30px);
+    transform: translate(10px, -25px);
     margin-right: 15px;
     object-fit: cover;
   }
@@ -829,8 +871,13 @@
   /* Target: Menampilkan jabatan instruktur versi mobile. */
   .instructor-title .title-mobile {
     display: inline;
-    font-size: 13px;
+    font-size: 0.75rem;
     color: #333333AD;
+  }
+
+  .instructor-name {
+    font-size: 0.875rem;
+    margin-top: 18px;
   }
 
   /* Target: Menyembunyikan jabatan instruktur versi desktop. */
@@ -850,10 +897,9 @@
 
   /* Target: Mengatur ulang posisi harga kursus di mobile. */
   .course-price {
-    margin-top: 5 !important;
-    margin-right: 200px !;
-    font-size: 22px;
-
+    margin-top: 0.5rem;
+    margin-right: 0;
+    font-size: 1rem;
   }
 
   .rating-info {}
@@ -861,7 +907,6 @@
   .rating-text-wrapper {
     border-bottom: 1px solid #6B7280;
     padding-bottom: 0px;
-    /* Opsional, untuk memberi jarak */
   }
 
   .footer-about {
@@ -920,7 +965,7 @@
 
   }
 
-  /* Menngatur footer teks perusahaan dll. */
+  /* Mengatur footer teks perusahaan dll. */
   .desktop-only {
     display: none;
   }
@@ -929,5 +974,4 @@
   .mobile-only {
     display: inline;
   }
-
 }

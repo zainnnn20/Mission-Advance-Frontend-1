@@ -1,0 +1,138 @@
+/* Impor font 'Inter' dari Google. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Pembungkus utama seluruh halaman Profil. */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FFFBF0;
+}
+
+/* Wadah untuk konten utama (kartu form). */
+.profile-page-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Kartu putih yang berisi form edit profil. */
+.profile-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Teks judul utama di dalam kartu ("Edit Profil"). */
+.profile-card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin: 0;
+}
+
+/* Teks paragraf deskripsi di bawah judul. */
+.profile-card p {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* Wadah untuk setiap pasangan label dan input di form. */
+.profile-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Teks label di atas setiap kolom input. */
+.profile-form label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Kolom input teks. */
+.profile-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Wadah untuk tombol "Kembali" dan "Simpan". */
+.profile-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Gaya umum untuk kedua tombol di bawah form. */
+.profile-actions button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek animasi saat kursor menyentuh tombol. */
+.profile-actions button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tombol utama ("Simpan Perubahan"). */
+.profile-actions .btn-primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Efek hover untuk tombol utama. */
+.profile-actions .btn-primary:hover {
+  background-color: #4eca38;
+}
+
+/* Tombol sekunder ("Kembali"). */
+.profile-actions .btn-secondary {
+  background-color: #f59f0bd6;
+  color: white;
+}
+
+/* Efek hover untuk tombol sekunder. */
+.profile-actions .btn-secondary:hover {
+  background-color: #F59E0B;
+}
+
+/* Aturan khusus untuk layar mobile (768px ke bawah). */
+@media (max-width: 768px) {
+
+  /* Menyesuaikan padding kartu di mobile. */
+  .profile-card {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Mengubah susunan tombol menjadi vertikal di mobile. */
+  .profile-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Menyesuaikan ukuran font & padding tombol di mobile. */
+  .profile-actions button {
+    font-size: 0.9rem;
+    padding: 0.65rem;
+  }
+}

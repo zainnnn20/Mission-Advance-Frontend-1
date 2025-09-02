@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './login.css';
-import logoVideobelajar from './assets/image/Logo.png';
+import '../assets/style/login.css';
+import logoVideobelajar from '../assets/image/Logo.png';
 
 const GoogleIcon = () => (
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">

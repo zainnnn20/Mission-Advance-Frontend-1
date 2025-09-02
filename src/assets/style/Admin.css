@@ -1,0 +1,330 @@
+/* Impor font 'Inter' dari Google. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- Solusi Sticky Footer & Layout Lebar --- */
+/* Pembungkus utama seluruh halaman Admin (untuk sticky footer). */
+.admin-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FFFBF0;
+  font-family: 'Inter', sans-serif;
+  color: #374151;
+}
+
+/* Area konten utama (antara header & footer). */
+.admin-main-content {
+  flex-grow: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Wadah judul halaman. */
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+/* Teks judul utama ("Manajemen Produk"). */
+.admin-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Teks deskripsi di bawah judul. */
+.admin-header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* --- Kartu Putih --- */
+/* Kartu putih untuk form dan daftar produk. */
+.admin-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* Judul di dalam kartu ("Tambah Produk Baru"). */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Form --- */
+/* Form untuk menambah produk. */
+.add-product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+/* Wadah untuk setiap pasangan label dan input. */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Teks label ("Nama Produk", "Harga"). */
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Kolom input teks. */
+.form-group input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Tombol "Tambah Produk" di dalam form. */
+.add-product-form .btn-primary {
+  padding: 0.75rem 2rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: fit-content;
+}
+
+/* Wadah input harga & panah kustom. */
+.input-number-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Menyembunyikan panah default input angka (Chrome/Safari). */
+.input-number-wrapper input[type=number]::-webkit-inner-spin-button,
+.input-number-wrapper input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Menyembunyikan panah default input angka (Firefox). */
+.input-number-wrapper input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Wadah panah kustom (atas & bawah). */
+.input-number-controls {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Tombol panah kustom (atas/bawah). */
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  border: none;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s;
+  border-left: 1px solid #d1d5db;
+}
+
+/* Efek hover tombol panah. */
+.control-btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Panah atas (untuk memberi garis batas). */
+.control-btn:first-child {
+  border-bottom: 1px solid #d1d5db;
+}
+
+/* Panah bawah (untuk sudut melengkung). */
+.control-btn:last-child {
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* Memberi ruang agar teks input tidak tertimpa panah. */
+.input-number-wrapper input[type=number] {
+  padding-right: 2.5rem;
+}
+
+/* --- Daftar Produk --- */
+/* Pesan yang muncul saat tidak ada produk. */
+.product-list-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* Ikon di pesan kosong. */
+.product-list-empty svg {
+  margin: 0 auto;
+  height: 3rem;
+  width: 3rem;
+  color: #d1d5db;
+}
+
+/* Judul pesan kosong. */
+.product-list-empty h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Deskripsi pesan kosong. */
+.product-list-empty p {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Grid untuk semua kartu produk. */
+.product-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* Kartu untuk satu produk. */
+.product-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animasi kartu saat disentuh kursor. */
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar produk. */
+.product-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Area teks di dalam kartu. */
+.product-item-content {
+  padding: 1rem;
+}
+
+/* Judul produk di kartu. */
+.product-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Teks harga produk. */
+.product-item p.product-price {
+  margin-top: 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+/* Wadah tombol "Edit" & "Hapus". */
+.product-item-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Gaya umum tombol "Edit" & "Hapus". */
+.product-item-actions button {
+  flex: 1;
+  padding: 0.4rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Efek hover tombol "Edit" & "Hapus". */
+.product-item-actions button:hover {
+  opacity: 0.85;
+}
+
+/* Tombol "Edit". */
+.btn-edit {
+  background-color: #fbbe244d;
+  color: #92400E;
+}
+
+/* Tombol "Hapus". */
+.btn-delete {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+}
+
+/* Efek hover tombol "Edit". */
+.btn-edit:hover {
+  background-color: #fde68af0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek hover tombol "Hapus". */
+.btn-delete:hover {
+  background-color: #FECACA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Aturan Responsive untuk Halaman Admin --- */
+/* Aturan khusus untuk layar mobile (768px ke bawah). */
+@media (max-width: 768px) {
+
+  /* Mengubah form menjadi vertikal. */
+  .add-product-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Mengatur lebar form group dan tombol agar konsisten. */
+  .add-product-form .form-group,
+  .add-product-form .btn-primary {
+    width: 100%;
+    max-width: 400px;
+  }
+}

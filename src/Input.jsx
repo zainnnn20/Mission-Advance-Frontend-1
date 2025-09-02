@@ -14,7 +14,6 @@ function Input({ id, label, type = 'text', value, onChange, children }) {
           onChange={onChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green"
         />
-        {/* 'children' digunakan untuk menampilkan ikon jika ada */}
         {children}
       </div>
     </div>

@@ -1,0 +1,95 @@
+/* Lokasi: src/EditModal.css */
+
+/* Latar belakang gelap transparan di seluruh layar saat modal muncul. */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+/* Kotak putih (window) yang berisi form edit. */
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Teks judul di dalam modal ("Edit Produk"). */
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+/* Wadah untuk setiap pasangan label & input di modal. */
+.modal-content .form-group {
+  margin-bottom: 1rem;
+}
+
+/* Teks label di atas kolom input. */
+.modal-content .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Kolom input teks di dalam modal. */
+.modal-content .form-group input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Wadah untuk tombol "Batal" dan "Simpan Perubahan". */
+.modal-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Gaya umum untuk semua tombol di dalam modal. */
+.modal-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Tombol "Batal". */
+.btn-cancel {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+/* Efek saat kursor menyentuh tombol "Batal". */
+.btn-cancel:hover {
+  background-color: #d1d5db;
+}
+
+/* Tombol "Simpan Perubahan". */
+.btn-save {
+  background-color: #4f46e5;
+  color: white;
+}
+/* Efek saat kursor menyentuh tombol "Simpan". */
+.btn-save:hover {
+  background-color: #4338ca;
+}

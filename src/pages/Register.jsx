@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Register.css';
-import logoVideobelajar from './assets/image/Logo.png';
-import indonesiaFlag from './assets/image/Bendera.png';
+import '../assets/style/Register.css';
+import logoVideobelajar from '../assets/image/Logo.png';
+import indonesiaFlag from '../assets/image/Bendera.png';
 
 const GoogleIcon = () => (
 <svg viewBox="0 0 48 48">
@@ -119,8 +119,8 @@ return (
         </div>
         <a href="#" className="forgot-password-link">Lupa Password?</a>
         <div className="button-group">
-          <button type="button" className="btn btn-primary" onClick={()=> onNavigate('login')}>Masuk</button>
-          <button type="submit" className="btn btn-secondary">Daftar</button>
+          <button type="submit" className="btn btn-primary">Daftar</button>
+          <button type="button" className="btn btn-secondary" onClick={()=> onNavigate('login')}>Masuk</button>
         </div>
         <div className="separator">
           <span className="separator-text">atau</span>
