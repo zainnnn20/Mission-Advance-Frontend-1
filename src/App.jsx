@@ -7,6 +7,7 @@ import Register from './pages/Register';
 import Beranda from './pages/Beranda';
 import Admin from './pages/Admin';
 import Profile from './pages/Profile';
+import { initialCourses } from '../data.js';
 
 const LOCAL_STORAGE_KEY = 'savedCourses';
 const LOCAL_STORAGE_KEY_USER = 'currentUser';
