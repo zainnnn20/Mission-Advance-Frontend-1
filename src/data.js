@@ -19,16 +19,141 @@ import avatarJenna8 from './assets/image/8.png';
 import avatarJenna9 from './assets/image/9.png';
 
 
-export const initialCourses = [
-    { id: 1, category: 'Big 4 Auditor', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage1 },
-  { id: 2, category: 'Pemasaran', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna2 }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage2 },
-  { id: 3, category: 'Pengembangan Diri', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna3  }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage3 },
-  { id: 4, category: 'Bisnis', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna4  }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage4 },
-  { id: 5, category: 'Pemasaran', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna5  }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage5 },
-  { id: 6, category: 'Big 4 Auditor', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna6  }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage6 },
-  { id: 7, category: 'Pengembangan Diri', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna7  }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage7 },
-  { id: 8, category: 'Bisnis', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna8  }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage8 },
-  { id: 9, category: 'Pemasaran', title: 'Big 4 Auditor Financial Analyst', subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik', instructor: { name: 'Jenna Ortega', title: 'Senior Accountant di Gojek', avatar: avatarJenna9  }, rating: 3.5, ratingCount: 86, price: '300000', image: courseImage9 },
+export const initialCourses = [{
+    id: 1,
+    category: 'Big 4 Auditor',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage1
+  },
+  {
+    id: 2,
+    category: 'Pemasaran',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna2
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage2
+  },
+  {
+    id: 3,
+    category: 'Pengembangan Diri',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna3
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage3
+  },
+  {
+    id: 4,
+    category: 'Bisnis',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna4
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage4
+  },
+  {
+    id: 5,
+    category: 'Pemasaran',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna5
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage5
+  },
+  {
+    id: 6,
+    category: 'Big 4 Auditor',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna6
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage6
+  },
+  {
+    id: 7,
+    category: 'Pengembangan Diri',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna7
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage7
+  },
+  {
+    id: 8,
+    category: 'Bisnis',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna8
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage8
+  },
+  {
+    id: 9,
+    category: 'Pemasaran',
+    title: 'Big 4 Auditor Financial Analyst',
+    subtitle: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik',
+    instructor: {
+      name: 'Jenna Ortega',
+      title: 'Senior Accountant di Gojek',
+      avatar: avatarJenna9
+    },
+    rating: 3.5,
+    ratingCount: 86,
+    price: '300000',
+    image: courseImage9
+  },
 ];
 
 export const allCourseImages = [

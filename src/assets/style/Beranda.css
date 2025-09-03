@@ -315,6 +315,14 @@
     line-height: 0.7;
   }
 
+  /* Target: Teks deskripsi di bawah judul kursus */
+  .course-subtitle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
   /* Target: Gambar avatar instruktur. */
   .instructor-name {
     font-size: 15px;
