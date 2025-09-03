@@ -862,7 +862,7 @@
     height: 90px;
     border-radius: 8px;
     flex-shrink: 0;
-    transform: translate(10px, -25px);
+    transform: translate(10px, -36px);
     margin-right: 15px;
     object-fit: cover;
   }
