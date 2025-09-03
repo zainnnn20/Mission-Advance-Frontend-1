@@ -108,103 +108,99 @@ function Admin({ onNavigate, onLogout, courses, setCourses }) {
     setEditingCourse(null);
   };
 
-return (
-<div className="admin-page-wrapper">
-  <header className="beranda-header">
-    <div className="beranda-container header-content">
-      <img src={logoVideobelajar} alt="Logo Videobelajar" className="header-logo" onClick={()=> onNavigate('beranda')}
-      style={{cursor: 'pointer'}}
+  return (
+    <div className="admin-page-wrapper">
+      <header className="beranda-header">
+        <div className="beranda-container header-content">
+          <img src={logoVideobelajar} alt="Logo Videobelajar" className="header-logo" onClick={() => onNavigate('beranda')}
+            style={{ cursor: 'pointer' }}
+          />
+          <div className="header-right-nav">
+            <p className="header-category-text" onClick={() => onNavigate('admin')}>Admin</p>
+            <p className="header-category-text">Kategori</p>
+            <div className="user-profile" onClick={() => onNavigate('profile')} title="Edit Profil">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                {currentUser && currentUser.name ? (
+                  <div className="user-info">
+                    <span className="user-greeting">Hello, {currentUser.name}</span>
+                    <span className="user-email">{currentUser.email}</span>
+                  </div>
+                ) : null}
+                <img src={profileImageToShow} alt="User Avatar" className="profile-desktop" />
+                <img src={profileImageMobileToShow} alt="User Avatar" className="profile-mobile" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main className="admin-main-content">
+        <div className="admin-header">
+          <h1>Manajemen Produk</h1>
+          <p>Tambah, edit, atau hapus produk dari daftar Anda.</p>
+        </div>
+        <div className="admin-card">
+          <h2 className="card-title">Tambah Produk Baru</h2>
+          <form onSubmit={handleAddCourse} className="add-product-form">
+            <div className="form-group">
+              <label htmlFor="title">Nama Produk</label>
+              <input id="title" type="text" placeholder="Contoh: Kopi Susu" value={title} onChange={(e) =>
+                setTitle(e.target.value)} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="price">Harga (Rp)</label>
+              <div className="input-number-wrapper">
+                <input id="price" type="number" placeholder="Contoh: 20000" value={price} onChange={(e) =>
+                  setPrice(e.target.value)}
+                />
+                <div className="input-number-controls">
+                  <button type="button" className="control-btn" onClick={() => handlePriceChange(true)}>
+                    <ChevronUpIcon />
+                  </button>
+                  <button type="button" className="control-btn" onClick={() => handlePriceChange(false)}>
+                    <ChevronDownIcon />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button type="submit" className="btn-primary">Tambah Produk</button>
+          </form>
+        </div>
+        {courses.length === 0 ? (
+          <div className="admin-card">
+            <div className="product-list-empty">
+              <BoxIcon />
+              <h3>Belum ada produk</h3>
+              <p>Gunakan formulir di atas untuk menambahkan produk pertama Anda.</p>
+            </div>
+          </div>
+        ) : (
+          <div className="product-list-grid">
+            {courses.map((course) => (
+              <div key={course.id} className="product-item">
+                <img src={course.image} alt={course.title} />
+                <div className="product-item-content">
+                  <h4>{course.title}</h4>
+                  <p className="product-price">Rp {Number(course.price).toLocaleString('id-ID')}</p>
+                  <div className="product-item-actions">
+                    <button className="btn-edit" onClick={() => handleEditCourse(course.id)}>
+                      <PencilIcon /> Edit
+                    </button>
+                    <button className="btn-delete" onClick={() => handleDeleteCourse(course.id)}>
+                      <TrashIcon /> Hapus
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </main>
+      <Footer />
+      <EditModal course={editingCourse} onClose={() => setEditingCourse(null)}
+        onSave={handleUpdateCourse}
       />
-      <div className="header-right-nav">
-        <p className="header-category-text" onClick={()=> onNavigate('admin')}>Admin</p>
-        <p className="header-category-text">Kategori</p>
-        <div className="user-profile" onClick={()=> onNavigate('profile')} title="Edit Profil">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            {currentUser && currentUser.name ? (
-            <div className="user-info">
-              <span className="user-greeting">Hello, {currentUser.name}</span>
-              <span className="user-email">{currentUser.email}</span>
-            </div>
-            ) : null}
-
-            <img src={profileImageToShow} alt="User Avatar" className="profile-desktop" />
-            <img src={profileImageMobileToShow} alt="User Avatar" className="profile-mobile" />
-          </div>
-        </div>
-      </div>
     </div>
-  </header>
-  <main className="admin-main-content">
-    <div className="admin-header">
-      <h1>Manajemen Produk</h1>
-      <p>Tambah, edit, atau hapus produk dari daftar Anda.</p>
-    </div>
-
-    <div className="admin-card">
-      <h2 className="card-title">Tambah Produk Baru</h2>
-      <form onSubmit={handleAddCourse} className="add-product-form">
-        <div className="form-group">
-          <label htmlFor="title">Nama Produk</label>
-          <input id="title" type="text" placeholder="Contoh: Kopi Susu" value={title} onChange={(e)=>
-          setTitle(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="price">Harga (Rp)</label>
-          <div className="input-number-wrapper">
-            <input id="price" type="number" placeholder="Contoh: 20000" value={price} onChange={(e)=>
-            setPrice(e.target.value)}
-            />
-            <div className="input-number-controls">
-              <button type="button" className="control-btn" onClick={()=> handlePriceChange(true)}>
-                <ChevronUpIcon />
-              </button>
-              <button type="button" className="control-btn" onClick={()=> handlePriceChange(false)}>
-                <ChevronDownIcon />
-              </button>
-            </div>
-
-          </div>
-        </div>
-        <button type="submit" className="btn-primary">Tambah Produk</button>
-      </form>
-    </div>
-
-    {courses.length === 0 ? (
-    <div className="admin-card">
-      <div className="product-list-empty">
-        <BoxIcon />
-        <h3>Belum ada produk</h3>
-        <p>Gunakan formulir di atas untuk menambahkan produk pertama Anda.</p>
-      </div>
-    </div>
-    ) : (
-    <div className="product-list-grid">
-      {courses.map((course) => (
-      <div key={course.id} className="product-item">
-        <img src={course.image} alt={course.title} />
-        <div className="product-item-content">
-          <h4>{course.title}</h4>
-          <p className="product-price">Rp {Number(course.price).toLocaleString('id-ID')}</p>
-          <div className="product-item-actions">
-            <button className="btn-edit" onClick={()=> handleEditCourse(course.id)}>
-              <PencilIcon /> Edit
-            </button>
-            <button className="btn-delete" onClick={()=> handleDeleteCourse(course.id)}>
-              <TrashIcon /> Hapus
-            </button>
-          </div>
-        </div>
-      </div>
-      ))}
-    </div>
-    )}
-  </main>
-  <Footer />
-  <EditModal course={editingCourse} onClose={()=> setEditingCourse(null)}
-    onSave={handleUpdateCourse}
-    />
-</div>
-);
+  );
 }
 
 export default Admin;
