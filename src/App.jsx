@@ -1,121 +1,78 @@
-import React, {
-  useState,
-  useEffect
-} from 'react';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Beranda from './pages/Beranda';
-import Admin from './pages/Admin';
-import Profile from './pages/Profile';
-import { initialCourses } from './data.js';
+import React, { useState, useEffect, useCallback } from "react";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Beranda from "./pages/Beranda";
+import Admin from "./pages/Admin";
+import Profile from "./pages/Profile";
+import { getAllCourses } from "./services/courseAPI.js";
 
-const LOCAL_STORAGE_KEY = 'savedCourses';
-const LOCAL_STORAGE_KEY_USER = 'currentUser';
+const LOCAL_STORAGE_KEY_USER = "currentUser";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('login');
-  const [courses, setCourses] = useState(() => {
+  const [currentPage, setCurrentPage] = useState("beranda");
+  const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const fetchCourses = useCallback(async () => {
     try {
-      const savedCourses = localStorage.getItem(LOCAL_STORAGE_KEY);
-      if (savedCourses) {
-        return JSON.parse(savedCourses);
-      } else {
-        return initialCourses;
-      }
-    } catch (error) {
-      console.error("Gagal memuat data", error);
-      return initialCourses;
-    }
-  });
-
-  const [currentUser, setCurrentUser] = useState(null);
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem(LOCAL_STORAGE_KEY_USER);
-    if (savedUser) {
-      setCurrentUser(JSON.parse(savedUser));
+      setLoading(true);
+      setError(null);
+      const response = await getAllCourses();
+      setCourses(response);
+    } catch (err) {
+      setError(err);
+      console.error("Gagal mengambil data kursus:", err);
+    } finally {
+      setLoading(false);
     }
   }, []);
 
   useEffect(() => {
-    try {
-      if (currentUser) {
-        localStorage.setItem(LOCAL_STORAGE_KEY_USER, JSON.stringify(currentUser));
-      }
-    } catch (error) {
-      console.error("Gagal menyimpan data pengguna ke localStorage", error);
+    if (currentPage !== "login" && currentPage !== "register") {
+      fetchCourses();
     }
-  }, [currentUser]);
+  }, [currentPage, fetchCourses]);
 
   useEffect(() => {
-    try {
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(courses));
-    } catch (error) {
-      console.error("Gagal menyimpan data ke localStorage", error);
-    }
-  }, [courses]);
+    const simulatedUser = { name: "A'lay", email: "zelensky@gmail.com" };
+    localStorage.setItem(LOCAL_STORAGE_KEY_USER, JSON.stringify(simulatedUser));
+  }, []);
 
-  const handleNavigate = (page) => {
-    setCurrentPage(page);
+  const handleNavigate = (page) => setCurrentPage(page);
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "login":
+        return <Login onNavigate={handleNavigate} />;
+      case "register":
+        return <Register onNavigate={handleNavigate} />;
+      case "profile":
+        return <Profile onNavigate={handleNavigate} />;
+      case "admin":
+        return (
+          <Admin
+            onNavigate={handleNavigate}
+            courses={courses}
+            fetchCourses={fetchCourses}
+            loading={loading}
+            error={error}
+          />
+        );
+      case "beranda":
+      default:
+        return (
+          <Beranda
+            onNavigate={handleNavigate}
+            courses={courses}
+            loading={loading}
+            error={error}
+          />
+        );
+    }
   };
-  const handleLoginSuccess = () => {
-    setCurrentPage('beranda');
-  };
-  const handleLogout = () => {
-    setCurrentPage('login');
-  };
 
-  if (currentPage === 'login') {
-    return <Login onNavigate = {
-      handleNavigate
-    }
-    onLoginSuccess = {
-      handleLoginSuccess
-    }
-    />;
-  }
-  if (currentPage === 'register') {
-    return <Register onNavigate = {
-      handleNavigate
-    }
-    />;
-  }
-
-  if (currentPage === 'profile') {
-    return <Profile onNavigate = {
-      handleNavigate
-    }
-    />;
-  }
-
-  if (currentPage === 'admin') {
-    return ( <
-      Admin onNavigate = {
-        handleNavigate
-      }
-      courses = {
-        courses
-      }
-      setCourses = {
-        setCourses
-      }
-      />
-    );
-  }
-  if (currentPage === 'beranda') {
-    return ( <
-      Beranda onLogout = {
-        handleLogout
-      }
-      onNavigate = {
-        handleNavigate
-      }
-      courses = {
-        courses
-      }
-      />
-    );
-  }
+  return <div>{renderPage()}</div>;
 }
 
 export default App;

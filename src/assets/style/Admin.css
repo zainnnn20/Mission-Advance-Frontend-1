@@ -1,5 +1,5 @@
 /* Impor font 'Inter' dari Google. */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 /* --- Solusi Sticky Footer & Layout Lebar --- */
 /* Pembungkus utama seluruh halaman Admin (untuk sticky footer). */
@@ -7,8 +7,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FFFBF0;
-  font-family: 'Inter', sans-serif;
+  background-color: #fffbf0;
+  font-family: "Inter", sans-serif;
   color: #374151;
 }
 
@@ -84,6 +84,14 @@
   margin-bottom: 0.5rem;
 }
 
+/* Style baru untuk kontainer daftar produk */
+.product-list-container {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 2.5rem;
+}
+
 /* Kolom input teks. */
 .form-group input {
   width: 100%;
@@ -114,14 +122,14 @@
 }
 
 /* Menyembunyikan panah default input angka (Chrome/Safari). */
-.input-number-wrapper input[type=number]::-webkit-inner-spin-button,
-.input-number-wrapper input[type=number]::-webkit-outer-spin-button {
+.input-number-wrapper input[type="number"]::-webkit-inner-spin-button,
+.input-number-wrapper input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Menyembunyikan panah default input angka (Firefox). */
-.input-number-wrapper input[type=number] {
+.input-number-wrapper input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -171,7 +179,7 @@
 }
 
 /* Memberi ruang agar teks input tidak tertimpa panah. */
-.input-number-wrapper input[type=number] {
+.input-number-wrapper input[type="number"] {
   padding-right: 2.5rem;
 }
 
@@ -288,13 +296,13 @@
 /* Tombol "Edit". */
 .btn-edit {
   background-color: #fbbe244d;
-  color: #92400E;
+  color: #92400e;
 }
 
 /* Tombol "Hapus". */
 .btn-delete {
-  background-color: #FEE2E2;
-  color: #B91C1C;
+  background-color: #fee2e2;
+  color: #b91c1c;
 }
 
 /* Efek hover tombol "Edit". */
@@ -306,7 +314,7 @@
 
 /* Efek hover tombol "Hapus". */
 .btn-delete:hover {
-  background-color: #FECACA;
+  background-color: #fecaca;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -314,7 +322,6 @@
 /* --- Aturan Responsive untuk Halaman Admin --- */
 /* Aturan khusus untuk layar mobile (768px ke bawah). */
 @media (max-width: 768px) {
-
   /* Mengubah form menjadi vertikal. */
   .add-product-form {
     flex-direction: column;

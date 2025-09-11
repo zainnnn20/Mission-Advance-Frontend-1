@@ -1,20 +1,19 @@
+/* --- Settingan Font Global --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 /* Aturan ini berlaku untuk layar dengan lebar dekstop dan laptop maksimal 1440px.*/
 @media (max-width: 1440px) {
-
-  /* --- Settingan Font Global --- */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
   /* Target: Elemen body, pengaturan dasar untuk seluruh halaman. */
   body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   /* Target: Wadah utama seluruh halaman beranda. */
   .beranda-page {
-    background-color: #FFFBF0 !important;
+    background-color: #fffbf0 !important;
     color: #374151;
   }
 
@@ -27,15 +26,14 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     box-sizing: border-box;
-
   }
 
   /* --- Header --- */
   /* Target: Seluruh bagian header di atas. */
   .beranda-header {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 1rem 0;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
     z-index: 50;
@@ -122,7 +120,7 @@
 
   .user-email {
     font-size: 0.8rem;
-    color: #6B7280;
+    color: #6b7280;
     white-space: nowrap;
   }
 
@@ -146,7 +144,7 @@
     padding: 5rem 1.5rem;
     text-align: center;
     color: white;
-    background-image: url('H1.jpg');
+    background-image: url("H1.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
@@ -162,7 +160,7 @@
 
   /* Target: Lapisan (overlay) gelap di atas gambar hero. */
   .hero-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -175,7 +173,7 @@
 
   /* Target: Subjudul seksi (jika ada). */
   .section-subtitle {
-    color: #333333AD;
+    color: #333333ad;
   }
 
   /* Target: Konten di dalam hero (judul, paragraf, tombol). */
@@ -192,8 +190,7 @@
     font-weight: 700;
     line-height: 1.3;
     margin: 0 0 1rem 0;
-    font-family: 'Poppins', sans-serif;
-
+    font-family: "Poppins", sans-serif;
   }
 
   /* Target: Teks paragraf/deskripsi di hero section. */
@@ -205,7 +202,7 @@
 
   /* Target: Tombol di dalam hero section. */
   .hero-button {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
     padding: 0.8rem 2rem;
     border: none;
@@ -218,7 +215,7 @@
 
   /* Target: Kondisi tombol hero saat kursor mouse di atasnya (hover). */
   .hero-button:hover {
-    background-color: #3ECF4C;
+    background-color: #3ecf4c;
   }
 
   /* --- Main Content & Course Grid --- */
@@ -226,7 +223,6 @@
   .main-content {
     padding-top: 3rem;
     padding-bottom: 4rem;
-
   }
 
   /* Target: Judul untuk setiap seksi, seperti "Kursus Populer". */
@@ -234,7 +230,7 @@
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #222325;
   }
 
@@ -252,7 +248,7 @@
     outline: none;
     box-shadow: none;
     padding: 0.9rem 1.25rem;
-    color: #333333AD;
+    color: #333333ad;
     font-size: 16px;
     font-weight: 540;
     cursor: pointer;
@@ -286,7 +282,7 @@
   /* Target: Setiap kartu kursus individu. */
   .course-card {
     background-color: white;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -335,7 +331,7 @@
   /* Target: Jabatan instruktur, versi desktop. */
   .instructor-title .title-desktop {
     font-size: 0.8rem;
-    color: #333333AD;
+    color: #333333ad;
     margin: 0;
     display: block;
   }
@@ -359,8 +355,6 @@
   .course-content {
     padding: 1rem;
     font-size: 15px;
-
-
   }
 
   /* Target: Judul kursus di dalam kartu. */
@@ -369,13 +363,13 @@
     font-weight: 600;
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #222325;
   }
 
   .course-author {
     font-size: 0.8rem;
-    color: #6B7280;
+    color: #6b7280;
     margin-bottom: 0.75rem;
   }
 
@@ -386,7 +380,7 @@
     justify-content: space-between;
     gap: 1rem;
     font-size: 0.8rem;
-    color: #6B7280;
+    color: #6b7280;
   }
 
   /*Target: Setiap item statistik (ikon + teks).*/
@@ -401,7 +395,13 @@
     margin-top: 0.75rem;
     font-size: 1.125rem;
     font-weight: 700;
-    color: #10B981;
+    color: #10b981;
+  }
+
+  /* Garis border pada ulasan. */
+  .rating-text-wrapper {
+    border-bottom: 1px solid #6b7280;
+    padding-bottom: 0px;
   }
 
   /* --- CTA (Call to Action) Section --- */
@@ -416,19 +416,18 @@
     padding: 3rem 1.5rem;
     text-align: center;
     color: white;
-    background-image: url('https://placehold.co/1200x300/222/444?text=CTA+Image');
+    background-image: url("https://placehold.co/1200x300/222/444?text=CTA+Image");
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
     max-width: 1030px;
     margin-left: auto;
     margin-right: auto;
-
   }
 
   /* Target: Lapisan overlay gelap di atas gambar CTA. */
   .cta-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -460,7 +459,7 @@
     font-weight: 700;
     margin: 0 0 0.5rem 0;
     margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   /* Target: Teks paragraf/deskripsi di seksi CTA. */
@@ -486,12 +485,12 @@
   /* Target: Kotak input email di form CTA. */
   .cta-form input {
     padding: 0.75rem 9rem 0.75rem 1rem;
-    border: 1px solid #333333AD;
+    border: 1px solid #333333ad;
     border-radius: 0.5rem;
     width: 100%;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.9);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   /* Target: Tombol di dalam form CTA. */
@@ -501,7 +500,7 @@
     right: 6px;
     transform: translateY(-50%);
     padding: 0.4rem 0.8rem;
-    background-color: #FFBD3A;
+    background-color: #ffbd3a;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -513,7 +512,7 @@
   /* --- Footer --- */
   /* Target: Seluruh bagian footer. */
   .beranda-footer {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding-top: 4rem;
     padding-bottom: 2rem;
   }
@@ -524,7 +523,7 @@
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 2rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid #e5e7eb;
   }
 
   /* Target: Logo di footer. */
@@ -540,7 +539,7 @@
   /* Target: Paragraf deskripsi tentang perusahaan di footer. */
   .footer-about p {
     margin-top: 1rem;
-    color: #6B7280;
+    color: #6b7280;
     line-height: 1.6;
     font-size: 0.9rem;
   }
@@ -564,7 +563,7 @@
 
   /* Target: Setiap link individu di footer. */
   .footer-links a {
-    color: #6B7280;
+    color: #6b7280;
     text-decoration: none;
     font-size: 0.9rem;
   }
@@ -580,7 +579,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    color: #333333AD;
+    color: #333333ad;
     font-size: 0.875rem;
   }
 
@@ -619,25 +618,22 @@
 
   /* Target: Kondisi ikon sosial saat di-hover. */
   .social-icon:hover {
-    color: #1F2937;
+    color: #1f2937;
   }
 
   /* Target: Ikon panah di footer (digunakan untuk mobile). */
   .footer-arrow-icon {
     display: none;
-
   }
 
   .footer-address {
     color: #222325 !important;
-
   }
 }
 
 /* --- ATURAN RESPONSIf (TABLET & MOBILE) --- */
 /* Target: Aturan ini hanya berlaku untuk layar dengan lebar maksimal 768px. */
 @media (max-width: 768px) {
-
   /* Target: Kontainer utama di mobile. */
   .beranda-container {
     padding: 0 1rem;
@@ -691,11 +687,12 @@
 
   /* Target: Wadah halaman beranda di mobile. */
   .beranda-page {
-    background-color: #FFFBF5;
-    font-family: 'Inter', sans-serif;
+    background-color: #fffbf5;
+    font-family: "Inter", sans-serif;
     color: #374151;
     overflow-x: hidden;
-    /* <-- TAMBAHKAN BARIS INI */
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   /* Target: Logo di header mobile. */
@@ -757,9 +754,8 @@
     padding: 8px;
     max-width: 500px;
     margin: 1.5rem auto 0;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #e5e7eb;
   }
-
 
   .cta-form button:hover {
     opacity: 0.9;
@@ -791,7 +787,7 @@
   /* Target: Mengatur ulang padding dan tampilan input CTA di mobile. */
   .cta-form input {
     background-color: white;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #e5e7eb;
     border-radius: 8px;
     text-align: center;
     padding: 0.75rem 1rem;
@@ -806,7 +802,7 @@
   /* Target: Tombol CTA di mobile. */
   .cta-form button {
     width: 100%;
-    background-color: #F59E0B;
+    background-color: #f59e0b;
     color: white;
     padding: 14px 24px;
     border: none;
@@ -880,7 +876,7 @@
   .instructor-title .title-mobile {
     display: inline;
     font-size: 0.75rem;
-    color: #333333AD;
+    color: #333333ad;
   }
 
   .instructor-name {
@@ -910,10 +906,11 @@
     font-size: 1rem;
   }
 
-  .rating-info {}
+  .rating-info {
+  }
 
   .rating-text-wrapper {
-    border-bottom: 1px solid #6B7280;
+    border-bottom: 1px solid #6b7280;
     padding-bottom: 0px;
   }
 
@@ -970,7 +967,6 @@
     opacity: 1;
     top: 5.44px;
     left: 3.79px;
-
   }
 
   /* Mengatur footer teks perusahaan dll. */
