@@ -26,6 +26,7 @@ function Beranda({ onNavigate, courses, loading, error }) {
     "Pengembangan Diri",
     "Bisnis",
   ];
+  
   const profileImageToShow =
     currentUser?.profilePicture || userProfileImageDesktop;
   const profileImageMobileToShow =
