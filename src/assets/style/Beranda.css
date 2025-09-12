@@ -454,18 +454,19 @@
 
   /* Target: Teks kecil di atas judul utama CTA. */
   .cta-eyebrow {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.8);
     margin: 0 0 0.5rem 0;
+    margin-bottom: 7px !important;
   }
 
   /* Target: Judul utama seksi CTA. */
   .cta-content h2 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0 0 0.5rem 0;
     margin-bottom: 10px;
     font-family: "Poppins", sans-serif;
@@ -662,6 +663,12 @@
     margin: 0;
   }
 
+  /* Target: Teks paragraf/deskripsi di hero section. */
+  .hero-content p {
+    font-size: 14px;
+    margin: 0 0 2rem 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
   /* Target: Judul hero di mobile. */
   .hero-content h1 {
     font-size: 1.75rem;
@@ -778,6 +785,12 @@
     border: none;
     padding: 0;
     text-align: center;
+  }
+
+  /* Target: Teks paragraf/deskripsi di seksi CTA. */
+  .cta-content p {
+    font-size: 14px;
+    font-weight: 300;
   }
 
   /* Target: Input dan Tombol di dalam form CTA mobile. */

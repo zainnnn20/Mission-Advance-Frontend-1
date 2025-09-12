@@ -105,9 +105,9 @@ function Beranda({ onNavigate, courses, loading, error }) {
             </h1>
             <p>
               Temukan ilmu baru yang menarik dan mendalam melalui koleksi video
-              pembelajaran berkualitas tinggi.
+              pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.
             </p>
-            <button className="hero-button">Temukan Video Course!</button>
+            <button className="hero-button">Temukan Video Course untuk Dipelajari!</button>
           </div>
         </div>
       </section>
@@ -145,9 +145,10 @@ function Beranda({ onNavigate, courses, loading, error }) {
           style={{ backgroundImage: `url(${ctaBackgroundImage})` }}
         >
           <div className="cta-content">
+            <p className="cta-eyebrow">NEWSLETTER</p>
             <h2>Mau Belajar Lebih Banyak?</h2>
             <p>
-              Daftarkan dirimu untuk mendapatkan informasi terbaru dari kami.
+              Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari program-program terbaik hariesok.id
             </p>
             <div className="cta-form">
               <input type="email" placeholder="Masukkan Emailmu" />
