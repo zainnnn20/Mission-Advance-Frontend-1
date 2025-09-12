@@ -35,8 +35,6 @@ function App() {
     if (savedUser) {
       const userData = JSON.parse(savedUser);
       setCurrentUser(userData);
-      setPageHistory(["beranda"]);
-      setCurrentPage("beranda");
     }
   }, []);
 
