@@ -113,6 +113,7 @@ function Beranda({ onNavigate, courses, loading, error }) {
       </section>
       <main className="beranda-container main-content">
         <h2 className="section-title">Koleksi Video Pembelajaran Unggulan</h2>
+        <p className="section-subtitle">Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
         <div className="filter-buttons">
           {filters.map((filter) => (
             <button

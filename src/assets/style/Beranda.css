@@ -229,9 +229,18 @@
   .section-title {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     font-family: "Poppins", sans-serif;
     color: #222325;
+  }
+
+  /* Mengubah style teks deskripsi di bawah judul.*/
+  .section-subtitle {
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 1.5rem;
+    color: #6b7280;
+    font-size: 1rem;
   }
 
   /* Target: Wadah untuk tombol-tombol filter. */
@@ -782,6 +791,15 @@
 
   .hero-section {
     margin-top: 40px;
+  }
+
+  /* Mengubah style teks deskripsi di bawah judul.*/
+  .section-subtitle {
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 1.5rem;
+    color: #6b7280;
+    font-size: 15px;
   }
 
   /* Target: Mengatur ulang padding dan tampilan input CTA di mobile. */

@@ -52,7 +52,10 @@ function App() {
     }
   }, [currentPage, currentUser, fetchCourses]);
 
-  const handleNavigate = (page) => setCurrentPage(page);
+  const handleNavigate = (newPage) => {
+    setPageHistory((prevHistory) => [...prevHistory, newPage]);
+    setCurrentPage(newPage);
+  };
 
   const handleLoginSuccess = (userData) => {
     setCurrentUser(userData);
