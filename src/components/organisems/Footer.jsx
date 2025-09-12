@@ -50,7 +50,7 @@ function Footer() {
         </div>
       </div>
       <div className="beranda-container footer-bottom">
-        <p>© 2025 Gerobak Sayur All Rights Reserved.</p>
+        <p>© 2023 Gerobak Sayur All Rights Reserved.</p>
         <div className="social-icons">
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FacebookIcon /></a>

@@ -26,7 +26,7 @@ function Beranda({ onNavigate, courses, loading, error }) {
     "Pengembangan Diri",
     "Bisnis",
   ];
-  
+
   const profileImageToShow =
     currentUser?.profilePicture || userProfileImageDesktop;
   const profileImageMobileToShow =
@@ -105,15 +105,21 @@ function Beranda({ onNavigate, courses, loading, error }) {
             </h1>
             <p>
               Temukan ilmu baru yang menarik dan mendalam melalui koleksi video
-              pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.
+              pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat
+              berpartisipasi dalam latihan interaktif yang akan meningkatkan
+              pemahaman Anda.
             </p>
-            <button className="hero-button">Temukan Video Course untuk Dipelajari!</button>
+            <button className="hero-button">
+              Temukan Video Course untuk Dipelajari!
+            </button>
           </div>
         </div>
       </section>
       <main className="beranda-container main-content">
         <h2 className="section-title">Koleksi Video Pembelajaran Unggulan</h2>
-        <p className="section-subtitle">Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
+        <p className="section-subtitle">
+          Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
+        </p>
         <div className="filter-buttons">
           {filters.map((filter) => (
             <button
@@ -148,7 +154,8 @@ function Beranda({ onNavigate, courses, loading, error }) {
             <p className="cta-eyebrow">NEWSLETTER</p>
             <h2>Mau Belajar Lebih Banyak?</h2>
             <p>
-              Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari program-program terbaik hariesok.id
+              Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran
+              spesial dari program-program terbaik hariesok.id
             </p>
             <div className="cta-form">
               <input type="email" placeholder="Masukkan Emailmu" />
