@@ -28,6 +28,7 @@ const BoxIcon = () => (
     />
   </svg>
 );
+
 const PencilIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +44,7 @@ const PencilIcon = () => (
     <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
   </svg>
 );
+
 const TrashIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -59,6 +61,7 @@ const TrashIcon = () => (
     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
   </svg>
 );
+
 const ChevronUpIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +76,7 @@ const ChevronUpIcon = () => (
     />
   </svg>
 );
+
 const ChevronDownIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -114,18 +118,21 @@ function Admin({ onNavigate, courses, fetchCourses, loading, error }) {
       : Math.max(0, currentValue - step);
     setPrice(String(newValue));
   };
+
   const handleAddCourse = async (e) => {
     e.preventDefault();
     if (!title || !price) {
       alert("Nama produk dan harga harus diisi!");
       return;
     }
+
     const imageKeys = Object.keys(imageMap);
     const avatarKeys = Object.keys(avatarMap);
     const randomImageKey =
       imageKeys[Math.floor(Math.random() * imageKeys.length)];
     const randomAvatarKey =
       avatarKeys[Math.floor(Math.random() * avatarKeys.length)];
+
     const newCourseData = {
       title,
       price: Number(price),
@@ -138,6 +145,7 @@ function Admin({ onNavigate, courses, fetchCourses, loading, error }) {
       rating: (Math.random() * (5 - 4) + 4).toFixed(1),
       ratingCount: Math.floor(Math.random() * 200) + 50,
     };
+
     try {
       await addCourse(newCourseData);
       alert("Produk berhasil ditambahkan!");
@@ -148,6 +156,7 @@ function Admin({ onNavigate, courses, fetchCourses, loading, error }) {
       alert(`Gagal menambahkan produk: ${err.message}`);
     }
   };
+
   const handleDeleteCourse = async (id) => {
     if (window.confirm("Apakah Anda yakin ingin menghapus produk ini?")) {
       try {
@@ -159,6 +168,7 @@ function Admin({ onNavigate, courses, fetchCourses, loading, error }) {
       }
     }
   };
+
   const handleEditCourse = (course) => setEditingCourse(course);
   const handleUpdateCourse = async (updatedCourse) => {
     try {

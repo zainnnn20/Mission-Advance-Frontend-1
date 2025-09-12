@@ -66,8 +66,19 @@ function Login({ onNavigate, onLoginSuccess }) {
 
   const handleLogin = (event) => {
     event.preventDefault();
+    
+    // Ambil nilai dari input form
+    const email = event.target.email.value;
+    
+    // Buat objek data pengguna
+    const userData = {
+      name: email.split('@')[0], // Mengambil bagian sebelum '@' sebagai nama
+      email: email
+    };
+
+    // Panggil onLoginSuccess HANYA SEKALI dan kirimkan userData
     if (onLoginSuccess) {
-      onLoginSuccess();
+      onLoginSuccess(userData);
     }
   };
 

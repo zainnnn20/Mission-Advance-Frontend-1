@@ -9,10 +9,12 @@ import { getAllCourses } from "./services/courseAPI.js";
 const LOCAL_STORAGE_KEY_USER = "currentUser";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("beranda");
+  const [currentPage, setCurrentPage] = useState("login");
+  const [pageHistory, setPageHistory] = useState(["login"]);
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
 
   const fetchCourses = useCallback(async () => {
     try {
@@ -29,22 +31,75 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (currentPage !== "login" && currentPage !== "register") {
-      fetchCourses();
+    const savedUser = localStorage.getItem(LOCAL_STORAGE_KEY_USER);
+    if (savedUser) {
+      const userData = JSON.parse(savedUser);
+      setCurrentUser(userData);
+      setPageHistory(["beranda"]);
+      setCurrentPage("beranda");
     }
-  }, [currentPage, fetchCourses]);
+  }, []);
 
   useEffect(() => {
-    const simulatedUser = { name: "A'lay", email: "zelensky@gmail.com" };
-    localStorage.setItem(LOCAL_STORAGE_KEY_USER, JSON.stringify(simulatedUser));
-  }, []);
+    if (currentUser) {
+      localStorage.setItem(LOCAL_STORAGE_KEY_USER, JSON.stringify(currentUser));
+    } else {
+      localStorage.removeItem(LOCAL_STORAGE_KEY_USER);
+    }
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (currentUser && currentPage !== "login" && currentPage !== "register") {
+      fetchCourses();
+    }
+  }, [currentPage, currentUser, fetchCourses]);
 
   const handleNavigate = (page) => setCurrentPage(page);
 
+  const handleLoginSuccess = (userData) => {
+    setCurrentUser(userData);
+    setCurrentPage("beranda");
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    setCurrentPage("login");
+  };
+
+  useEffect(() => {
+    const handleBrowserBack = () => {
+      if (
+        currentPage === "beranda" ||
+        currentPage === "admin" ||
+        currentPage === "profile"
+      ) {
+        handleLogout();
+      }
+    };
+    window.addEventListener("popstate", handleBrowserBack);
+    return () => {
+      window.removeEventListener("popstate", handleBrowserBack);
+    };
+  }, [currentPage, handleLogout]);
+
   const renderPage = () => {
+    if (!currentUser && currentPage !== "register" && currentPage !== "login") {
+      return (
+        <Login
+          onNavigate={handleNavigate}
+          onLoginSuccess={handleLoginSuccess}
+        />
+      );
+    }
+
     switch (currentPage) {
       case "login":
-        return <Login onNavigate={handleNavigate} />;
+        return (
+          <Login
+            onNavigate={handleNavigate}
+            onLoginSuccess={handleLoginSuccess}
+          />
+        );
       case "register":
         return <Register onNavigate={handleNavigate} />;
       case "profile":
@@ -64,6 +119,7 @@ function App() {
         return (
           <Beranda
             onNavigate={handleNavigate}
+            onLogout={handleLogout}
             courses={courses}
             loading={loading}
             error={error}
