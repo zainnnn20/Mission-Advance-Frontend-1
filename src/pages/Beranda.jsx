@@ -153,9 +153,13 @@ function Beranda({ onNavigate, courses, loading, error }) {
           <div className="cta-content">
             <p className="cta-eyebrow">NEWSLETTER</p>
             <h2>Mau Belajar Lebih Banyak?</h2>
-            <p>
+            <p className="cta-text-dekstop">
               Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran
-              spesial dari program-program terbaik hariesok.id
+              spesial dari program-program terbaik hariesok.id{" "}
+            </p>
+            <p className="cta-text-mobile">
+              Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran
+              spesial dari program-program terbaik harisenin.com
             </p>
             <div className="cta-form">
               <input type="email" placeholder="Masukkan Emailmu" />

@@ -478,6 +478,11 @@
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    display: block;
+  }
+
+  .cta-content .cta-text-mobile {
+    display: none; /* Sembunyikan teks mobile */
   }
 
   /* Target: Form input email di seksi CTA. */
@@ -789,6 +794,13 @@
 
   /* Target: Teks paragraf/deskripsi di seksi CTA. */
   .cta-content p {
+    font-size: 15px;
+    font-weight: 300;
+    display: none;
+  }
+
+  .cta-content .cta-text-mobile {
+    display: block;
     font-size: 15px;
     font-weight: 300;
   }
