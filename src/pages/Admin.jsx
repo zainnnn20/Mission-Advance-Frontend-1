@@ -128,20 +128,20 @@ function Admin({ onNavigate, courses, fetchCourses, loading, error }) {
 
     const imageKeys = Object.keys(imageMap);
     const avatarKeys = Object.keys(avatarMap);
-    const randomImageKey =
-      imageKeys[Math.floor(Math.random() * imageKeys.length)];
-    const randomAvatarKey =
-      avatarKeys[Math.floor(Math.random() * avatarKeys.length)];
+    const nextImageIndex = courses.length % imageKeys.length;
+    const sequentialImageKey = imageKeys[nextImageIndex];
+    const nextAvatarIndex = courses.length % avatarKeys.length;
+    const sequentialAvatarKey = avatarKeys[nextAvatarIndex];
 
     const newCourseData = {
       title,
       price: Number(price),
-      image: randomImageKey,
+      image: sequentialAvatarKey,
       subtitle:
         "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan kurikulum terbaik",
       instructor_name: "Jenna Ortega",
       instructor_title: "Senior Accountant di Gojek",
-      instructor_avatar: randomAvatarKey,
+      instructor_avatar: sequentialAvatarKey,
       rating: (Math.random() * (5 - 4) + 4).toFixed(1),
       ratingCount: Math.floor(Math.random() * 200) + 50,
     };
