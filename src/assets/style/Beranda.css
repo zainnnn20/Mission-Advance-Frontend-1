@@ -473,7 +473,7 @@
   }
 
   /* Target: Teks paragraf/deskripsi di seksi CTA. */
-  .cta-content p {
+  .cta-content p .cta-text-dekstop{
     margin: 0;
     max-width: 500px;
     margin-left: auto;
@@ -482,7 +482,7 @@
   }
 
   .cta-content .cta-text-mobile {
-    display: none; /* Sembunyikan teks mobile */
+    display: none; 
   }
 
   /* Target: Form input email di seksi CTA. */
@@ -793,9 +793,7 @@
   }
 
   /* Target: Teks paragraf/deskripsi di seksi CTA. */
-  .cta-content p {
-    font-size: 15px;
-    font-weight: 300;
+  .cta-content .cta-text-dekstop {
     display: none;
   }
 
